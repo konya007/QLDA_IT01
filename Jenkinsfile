@@ -33,7 +33,7 @@ pipeline {
                 }
             }
             steps {
-                bat 'venv/Scripts/pip install -r ./MuonTraSach/requirements.txt'
+                bat 'venv/Scripts/activite pip install -r ./MuonTraSach/requirements.txt'
             }
         }
 
