@@ -21,7 +21,7 @@ pipeline {
             }
             steps {
                 bat 'rm -rf venv'
-                bat 'py -3.12 -m venv venv'
+                bat 'python -m venv venv'
                 bat '.\\venv\\Scripts\\pip install --upgrade pip'
             }
         }
@@ -83,7 +83,7 @@ pipeline {
             echo " Pipeline failed. Please check the logs."
         }
         success {
-            echo " Pipeline succeeded!" 
+            echo " Pipeline succeeded!"
         }
         aborted {
             echo " Pipeline was aborted."
