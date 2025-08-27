@@ -83,7 +83,7 @@ pipeline {
             echo " Pipeline failed. Please check the logs."
         }
         success {
-            echo " Pipeline succeeded!"
+            echo " Pipeline succeeded!" 
         }
         aborted {
             echo " Pipeline was aborted."
