@@ -20,7 +20,7 @@ pipeline {
                 }
             }
             steps {
-                bat 'python -m venv venv'
+                sh 'python -m venv venv'
             }
         }
 
@@ -32,8 +32,8 @@ pipeline {
                 }
             }
             steps {
-                bat 'venv/Scripts/activate'
-                bat 'pip install -r ./MuonTraSach/requirements.txt'
+                sh 'venv/Scripts/activate'
+                sh 'pip install -r ./MuonTraSach/requirements.txt'
             }
         }
 
@@ -45,9 +45,9 @@ pipeline {
                 }
             }
             steps {
-                bat 'venv/Scripts/activate'
-                bat 'mkdir MuonTraSach'
-                bat 'python -m MuonTraSach.test.test_login'
+                sh 'venv/Scripts/activate'
+                sh 'cd MuonTraSach'
+                sh 'python -m MuonTraSach.test.test_login'
             }
         }
 
@@ -59,9 +59,9 @@ pipeline {
                 }
             }
             steps {
-                bat 'venv/Scripts/activate'
-                bat 'mkdir MuonTraSach'
-                bat 'python -m MuonTraSach.index'
+                sh 'venv/Scripts/activate'
+                sh 'cd MuonTraSach'
+                sh 'python -m MuonTraSach.index'
             }
         }
     }
