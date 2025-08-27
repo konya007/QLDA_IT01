@@ -46,7 +46,7 @@ pipeline {
             }
             steps {
                 bat 'venv/Scripts/activate'
-                bat 'python MuonTraSach/MuonTraSach/test/test_login.py'
+                bat 'cd MuonTraSach; python -m MuonTraSach.test.test_login'
             }
         }
 
@@ -59,7 +59,7 @@ pipeline {
             }
             steps {
                 bat 'venv/Scripts/activate'
-                bat 'python MuonTraSach/MuonTraSach/index.py'
+                bat 'cd MuonTraSach; python -m MuonTraSach.index'
             }
         }
     }
