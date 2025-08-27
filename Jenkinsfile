@@ -44,7 +44,10 @@ pipeline {
                 }
             }
             steps {
-                bat 'venv\\Scripts\\python.exe -m MuonTraSach.test.test_login'
+                bat '''
+                    cd MuonTraSach
+                    ..\\venv\\Scripts\\python.exe -m MuonTraSach.test.test_login
+                '''
             }
         }
 
@@ -56,7 +59,10 @@ pipeline {
                 }
             }
             steps {
-                bat 'venv\\Scripts\\python.exe -m MuonTraSach.index'
+                bat '''
+                    cd MuonTraSach
+                    ..\\venv\\Scripts\\python.exe -m MuonTraSach.index
+                '''
             }
         }
     }
