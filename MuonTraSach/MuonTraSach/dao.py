@@ -9,7 +9,6 @@ def auth_user(username, password):
         for u in users:
             if u['username']==username and u['password']==password:
                 return True
-
     return False
 
 
