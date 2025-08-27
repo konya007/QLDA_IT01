@@ -20,9 +20,9 @@ pipeline {
                 }
             }
             steps {
-                bat 'rm -rf venv'
+                bat 'Remove-Item -Recurse -Force venv'
                 bat 'python -m venv venv'
-                bat '.\\venv\\Scripts\\pip install --upgrade pip'
+                bat './venv/Scripts/pip install -r requirements.txt'
             }
         }
 
