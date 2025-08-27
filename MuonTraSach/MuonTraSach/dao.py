@@ -2,7 +2,7 @@ import json
 
 def auth_user(username, password):
     # absolute path
-    absolute_path = "F:\\TH5\\QLDA_IT01\\MuonTraSach\\MuonTraSach\\data\\users.json "
+    absolute_path = ".\\MuonTraSach\\data\\users.json "
     with open(absolute_path, encoding='utf-8') as f:
         users = json.load(f)
 
