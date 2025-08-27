@@ -46,20 +46,7 @@ pipeline {
             }
             steps {
                 bat 'venv/Scripts/activate'
-                bat 'cd MuonTraSach'
-                bat 'python -m MuonTraSach.test.test_login'
-            }
-        }
-
-        stage('Build') {
-            when {
-                anyOf {
-                    changeRequest()
-                    branch 'main'
-                }
-            }
-            steps {
-                echo "Building project on main..."
+                bat 'python MuonTraSach/MuonTraSach/test/test_login.py'
             }
         }
 
@@ -72,8 +59,7 @@ pipeline {
             }
             steps {
                 bat 'venv/Scripts/activate'
-                bat 'cd MuonTraSach'
-                bat 'python -m MuonTraSach.index'
+                bat 'python MuonTraSach/MuonTraSach/index.py'
             }
         }
     }
